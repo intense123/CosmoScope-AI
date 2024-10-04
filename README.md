@@ -38,5 +38,7 @@
 - **3D Visualization**: Three.js
 - **Design**: Figma (for UI/UX mockups)
 
+## Project Link: https://cosmo-scope-ai.vercel.app/
 
+## Presentation Link(240s) : https://drive.google.com/file/d/1EogCGma95km2Ujss-SWh4EjyyDxI4D-v/view?fbclid=IwY2xjawFtIzZleHRuA2FlbQIxMAABHQZxLEU92m-prqBE2Mvx6JsFmDLMt3YTp5zNjq7bogQC7d7F09D33xeCuw_aem_yvvprIpgJ_wZFSOJjjU2gA
 
