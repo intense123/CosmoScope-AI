@@ -1,0 +1,122 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap');
+
+.home-page-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100vh; /* Make it full height of the viewport */
+  text-align: center;
+  position: relative; /* Ensure this section scrolls */
+  perspective: 1px; /* Create a 3D space for parallax */
+}
+
+/* Add any additional styles you need for hero-section, titles, etc. */
+
+
+.hero-section {
+  z-index: 1;
+  transform: translateZ(-1px) scale(2); /* Scale for parallax */
+}
+
+.main-title {
+  font-size: 5rem;
+  font-weight: bold;
+  color: #d3d3d3;  
+}
+
+.subtitle {
+  font-size: 1.5rem;
+  color: #b0bec5;  
+  letter-spacing: 1px;
+  margin: 10px 0;
+}
+
+.description {
+  font-size: 1.2rem;
+  color: #9e9e9e;
+  font-style: italic;
+  margin-top: 10px;
+}
+
+/* Add parallax effect on scroll */
+@keyframes parallax {
+  from {
+      transform: translateY(0);
+  }
+  to {
+      transform: translateY(-30px);
+  }
+}
+
+.hero-section {
+  background-color: rgba(0, 0, 0, 0.5);  
+  padding: 20px;
+  border-radius: 10px;
+  animation: parallax 1s forwards; /* Trigger animation */
+}
+
+/* .visitor-counter {
+  position: absolute;
+  top: 20px;
+  left: 20px;
+  background-color: rgba(0, 0, 0, 0.6);
+  padding: 10px 20px;
+  border-radius: 5px;
+  color: #fff;
+  font-family: 'Arial', sans-serif;
+  font-size: 14px;
+  letter-spacing: 1px;
+  z-index: 1000;
+}
+
+.visitor-counter p {
+  margin: 0;
+  text-align: center;
+} */
+
+/* Add a keyframe for wipe from left effect */
+@keyframes wipeFromLeft {
+  from {
+    transform: translateX(-100%);
+    opacity: 0;
+  }
+  to {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+.visitor-counter {
+  position: absolute;
+  top: 20px;
+  left: 20px;
+  padding: 10px 25px;
+  border-radius: 10px;
+  background: linear-gradient(135deg, rgba(0, 0, 50, 0.8), rgba(50, 0, 100, 0.8));
+  color: #fff;
+  font-family: 'Poppins', sans-serif;
+  font-size: 18px;
+  letter-spacing: 1.5px;
+  text-shadow: 0px 0px 5px rgba(255, 255, 255, 0.8);
+  box-shadow: 0px 0px 15px rgba(0, 255, 255, 0.5), 0px 0px 30px rgba(100, 0, 255, 0.6);
+  z-index: 1000;
+  animation: cosmic-fade 4s infinite alternate, wipeFromLeft 1s ease-out;
+}
+
+.visitor-counter p {
+  margin: 0;
+  text-align: center;
+}
+
+@keyframes cosmic-fade {
+  0% {
+    opacity: 0.8;
+    box-shadow: 0px 0px 15px rgba(0, 255, 255, 0.5), 0px 0px 30px rgba(100, 0, 255, 0.6);
+  }
+  100% {
+    opacity: 1;
+    box-shadow: 0px 0px 20px rgba(63, 136, 136, 0.5), 0px 0px 40px rgba(157, 100, 255, 0.7);
+  }
+}
+
